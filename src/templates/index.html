@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,18 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <h3>Welcome user!</h3>
+    <section class="wrapper">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='assets/logo_vector.png') }}" alt="Logo">
+            <div class="search-container">
+                <input type="text" id="search-box" class="search-box" placeholder="Search or jump to...">
+                <span id="slash-icon" class="slash-icon">/</span>
+            </div>
+        </div>
+    </section>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>
