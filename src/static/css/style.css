@@ -13,6 +13,11 @@ html {
     height: 100vh;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #141d27 0%, #090a0f 100%);
+    color: #fff;
+}
+
+.wrapper{
+    display: none;
 }
 
 .navbar {
@@ -69,4 +74,67 @@ html {
 .search-box::selection {
     background-color: #141d27;
     color: rgb(196, 196, 196);
+}
+
+main, canvas {
+	display: block;
+}
+canvas {
+	display: block;
+	margin: 1.5 auto 1.5em auto;
+	width: 100%;
+	height: auto;
+	-webkit-tap-highlight-color: transparent;
+}
+.wrap {
+	margin: auto;
+	padding: 1.5em;
+	max-width: 37.5em;
+}
+
+.mobile-view > a {
+	color: #2762f3;
+	text-decoration: none;
+}
+.mobile-view > a:hover {
+	text-decoration: underline;
+}
+.mobile-view > a:active {
+	color: #0c48db;
+}
+.mobile-view > a:visited {
+	color: #5785f6;
+}
+.mobile-view > h1 {
+	font: 1.4em "Ubuntu", Arial, sans-serif;
+	line-height: 1.5;
+	margin-bottom: .75em;
+}
+.mobile-view > p, ul {
+	margin: 1.5em 0 0 0;
+}
+.mobile-view > ul {
+	margin-left: 1.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+	a {
+		color: #5785f6;
+	}
+	a:active {
+		color: #2762f3;
+	}
+	a:visited {
+		color: #87a9f9;
+	}
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        display: block; /* Show content on tablets and desktops */
+    }
+
+    .mobile-view {
+        display: none; /* Hide message on tablets and desktops */
+    }
 }
