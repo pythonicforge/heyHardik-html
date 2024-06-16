@@ -5,7 +5,7 @@
  *
  * @returns {void}
  */
-function startLoader(){
+function startLoader() {
     // Get the counter element by its class name
     let counterElement = document.querySelector('.counter');
     // Initialize the counter value
@@ -17,9 +17,9 @@ function startLoader(){
      *
      * @returns {void}
      */
-    function updateCounter(){
+    function updateCounter() {
         // If the counter value is 100, stop the animation
-        if(currentValue === 100){
+        if (currentValue === 100) {
             return;
         }
 
@@ -27,7 +27,7 @@ function startLoader(){
         currentValue += Math.floor(Math.random() * 10) + 1;
 
         // If the counter value exceeds 100, set it to 100
-        if(currentValue > 100){
+        if (currentValue > 100) {
             currentValue = 100;
         }
 
@@ -45,91 +45,91 @@ function startLoader(){
     updateCounter();
 }
 
-if(window.innerWidth >= 768){
+if (window.innerWidth >= 768) {
     startLoader();
 
-gsap.from(".circles", 2, {
-    top: "-100%",
-    ease: "elastic.out",
-    delay: 0.5,
-});
+    gsap.from(".circles", 2, {
+        top: "-100%",
+        ease: "elastic.out",
+        delay: 0.5,
+    });
 
-gsap.to(".circle-inner", 1, {
-    width: "75px",
-    heightt: "75px",
-    ease: "power4.inOut",
-    delay: 2,
-})
+    gsap.to(".circle-inner", 1, {
+        width: "75px",
+        heightt: "75px",
+        ease: "power4.inOut",
+        delay: 2,
+    })
 
-gsap.to(".circle-inner-rotator", 1, {
-    scale: 1,
-    ease: "power4.inOut",
-    delay: 2.5,
-})
+    gsap.to(".circle-inner-rotator", 1, {
+        scale: 1,
+        ease: "power4.inOut",
+        delay: 2.5,
+    })
 
-gsap.to(".circles", 1.5, {
-    rotation: 360,
-    ease: "power4.inOut",
-    delay: 3,
-})
+    gsap.to(".circles", 1.5, {
+        rotation: 360,
+        ease: "power4.inOut",
+        delay: 3,
+    })
 
-gsap.to(".block", 0.75, {
-    display: "block",
-    height: "200px",
-    ease: "power4.inOut",
-    delay: 4,
-})
+    gsap.to(".block", 0.75, {
+        display: "block",
+        height: "200px",
+        ease: "power4.inOut",
+        delay: 4,
+    })
 
-gsap.to(".block", 0.75, {
-    width: "800px",
-    ease: "power4.inOut",
-    delay: 4.5,
-})
+    gsap.to(".block", 0.75, {
+        width: "800px",
+        ease: "power4.inOut",
+        delay: 4.5,
+    })
 
-gsap.fromTo(".container", {
-    duration: 2,
-    left: "100%",
-    scale: 0.5,
-    ease: "power4.inOut",
-    delay: 4,
-}, {
-    duration: 2,
-    left: "50%",
-    scale: 0.5,
-    transform: "translateX(-50%",
-    ease: "power4.inOut",
-    delay: 4,
-})
+    gsap.fromTo(".container", {
+        duration: 2,
+        left: "100%",
+        scale: 0.5,
+        ease: "power4.inOut",
+        delay: 4,
+    }, {
+        duration: 2,
+        left: "50%",
+        scale: 0.5,
+        transform: "translateX(-50%",
+        ease: "power4.inOut",
+        delay: 4,
+    })
 
-gsap.to(".block", 1.5, {
-    width: "0px",
-    ease: "power4.inOut",
-    delay: 5,
-})
+    gsap.to(".block", 1.5, {
+        width: "0px",
+        ease: "power4.inOut",
+        delay: 5,
+    })
 
-gsap.to(".block", 1.5, {
-    height: "0px",
-    ease: "power4.inOut",
-    delay: 6,
-})
+    gsap.to(".block", 1.5, {
+        height: "0px",
+        ease: "power4.inOut",
+        delay: 6,
+    })
 
-gsap.to(".circles", 1.5, {
-    rotation: 0,
-    ease: "power4.inOut",
-    delay: 6.5,
-})
+    gsap.to(".circles", 1.5, {
+        rotation: 0,
+        ease: "power4.inOut",
+        delay: 6.5,
+    })
 
-gsap.to(".loader", 2.5, {
-    scale: 0,
-    ease: "power4.inOut",
-    delay: 7,
-})
+    gsap.to(".loader", 2.5, {
+        scale: 0,
+        ease: "power4.inOut",
+        delay: 7,
+    })
 
-gsap.to(".container", 2, {
-    scale: 1,
-    ease: "power4.inOut",
-    delay: 7.5,
-})
+    gsap.to(".container", 2, {
+        scale: 1,
+        ease: "power4.inOut",
+        delay: 7.5,
+    })
 
 }
 
@@ -165,10 +165,10 @@ window.addEventListener("DOMContentLoaded", game);
 function game() {
     // Initialize canvas and context
     const canvas = document.querySelector("canvas"),
-          c = canvas.getContext("2d"),
-          W = canvas.width,
-          H = canvas.height,
-          S = 2;
+        c = canvas.getContext("2d"),
+        W = canvas.width,
+        H = canvas.height,
+        S = 2;
 
     // Define assets URLs
     const assets = [
@@ -222,17 +222,17 @@ function game() {
      */
     const applyForce = e => {
         const ex = e.clientX - canvas.offsetLeft,
-              ey = e.clientY - (canvas.offsetTop - window.pageYOffset),
-              [x, y] = [ex / canvas.offsetWidth * W, ey / canvas.offsetHeight * H];
+            ey = e.clientY - (canvas.offsetTop - window.pageYOffset),
+            [x, y] = [ex / canvas.offsetWidth * W, ey / canvas.offsetHeight * H];
 
         const insideX = Math.abs(x - tumbleweed.x) <= tumbleweed.r,
-              insideY = Math.abs(y - tumbleweed.y) <= tumbleweed.r;
+            insideY = Math.abs(y - tumbleweed.y) <= tumbleweed.r;
 
         if (insideX && insideY) {
-            const xForce = tumbleweed.x - x, 
-                  yForce = tumbleweed.y - y,
-                  xAccel = xForce / tumbleweed.mass,
-                  yAccel = yForce / tumbleweed.mass;
+            const xForce = tumbleweed.x - x,
+                yForce = tumbleweed.y - y,
+                xAccel = xForce / tumbleweed.mass,
+                yAccel = yForce / tumbleweed.mass;
 
             tumbleweed.xVel += xAccel;
             tumbleweed.yVel += yAccel;
@@ -265,7 +265,7 @@ function game() {
 
         // Check for collision with left and right bounds
         const hitLeftBound = tumbleweed.x <= tumbleweed.r && tumbleweed.inPlay,
-              hitRightBound = tumbleweed.x >= W - tumbleweed.r;
+            hitRightBound = tumbleweed.x >= W - tumbleweed.r;
 
         if (hitLeftBound) tumbleweed.x = tumbleweed.r;
         else if (hitRightBound) tumbleweed.x = W - tumbleweed.r;
@@ -278,7 +278,7 @@ function game() {
 
         // Check for collision with top and bottom bounds
         const hitTopBound = tumbleweed.y <= tumbleweed.r,
-              hitBottomBound = tumbleweed.y >= H - tumbleweed.r;
+            hitBottomBound = tumbleweed.y >= H - tumbleweed.r;
 
         if (hitTopBound) tumbleweed.y = tumbleweed.r;
         else if (hitBottomBound) {

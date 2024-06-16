@@ -22,7 +22,6 @@ html {
     height: 100vh;
     overflow: hidden;
     background: #000;
-    user-select: var(--background-color);
 }
 
 .loader {
@@ -130,9 +129,10 @@ html {
     text-align: center;
 }
 
-main,
-canvas {
-    display: block;
+.mobile-view {
+    color: var(--text-color);
+    height: 100vh;
+    width: 100%;
 }
 
 canvas {
@@ -221,6 +221,9 @@ ul {
     }
 
     .mobile-view {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
