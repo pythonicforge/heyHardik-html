@@ -16,16 +16,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body, html {
+body,
+html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: #000;
-    color: var(--text-color);
 }
 
 .loader {
-    display: none;;
+    display: none;
+    ;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,9 +45,8 @@ body, html {
     color: var(--circle-outline);
     padding: 2rem 4rem;
     font-size: 10vw;
-    font-weight: lighter;
+    font-weight: 200;
     font-style: italic;
-    z-index: 1000;
 }
 
 .site-teaser span {
@@ -56,7 +56,7 @@ body, html {
     padding: 2rem 4rem;
     color: var(--circle-outline);
     font-size: 1rem;
-    font-weight: lighter;
+    font-weight: 500;
     font-style: italic;
 }
 
@@ -76,7 +76,7 @@ body, html {
     width: 100%;
     height: 100%;
     background: none;
-    border: 1px solid var(--circle-outline);
+    border: 2px solid var(--circle-outline);
     border-radius: 100%;
 }
 
@@ -96,7 +96,7 @@ body, html {
     width: 162.5px;
     height: 162.5px;
     background: none;
-    border: 1px solid var(--circle-outline);
+    border: 2px solid var(--circle-outline);
     border-radius: 100%;
 }
 
@@ -108,7 +108,7 @@ body, html {
     height: 0px;
     display: none;
     background: none;
-    border: 1px solid var(--circle-outline);
+    border: 2px solid var(--circle-outline);
     transform-origin: bottom;
 }
 
@@ -119,9 +119,6 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: #fff;
 }
 
@@ -129,9 +126,11 @@ body, html {
     font-size: 7.5rem;
     font-weight: 400;
     letter-spacing: -0.5rem;
+    text-align: center;
 }
 
-main, canvas {
+main,
+canvas {
     display: block;
 }
 
@@ -172,7 +171,8 @@ canvas {
     margin-bottom: .75em;
 }
 
-.mobile-view p, ul {
+.mobile-view p,
+ul {
     margin: 1.5em 0 0 0;
 }
 
@@ -199,8 +199,10 @@ canvas {
         display: block;
     }
 
-    .container{
-        display: block;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .mobile-view {
@@ -213,7 +215,7 @@ canvas {
         display: none;
     }
 
-    .container{
+    .container {
         display: none;
     }
 
