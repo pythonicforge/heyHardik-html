@@ -22,6 +22,7 @@ html {
     height: 100vh;
     overflow: hidden;
     background: #000;
+    user-select: var(--background-color);
 }
 
 .loader {
