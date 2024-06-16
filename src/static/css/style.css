@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --background-color: radial-gradient(ellipse at bottom, #141d27 0%, #090a0f 100%);
+    --backrgound-color: #000;
     --text-color: #fff;
     --primary-color: #007bff;
-    --light-gray: rgba(196, 196, 196, 0.5);
-    --search-box-bg: rgba(255, 255, 255, 0.1);
     --circle-outline: #505050;
 }
 
@@ -21,18 +19,19 @@ html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #000;
+    background: var(--backrgound-color);
+    color: var(--text-color);
 }
 
 .loader {
     display: none;
-    ;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: var(--backrgound-color);
+    user-select: none;
 }
 
 .counter {
@@ -112,6 +111,10 @@ html {
     transform-origin: bottom;
 }
 
+.section-gap {
+    margin: 2rem 1.5rem;
+}
+
 .container {
     display: none;
     position: fixed;
@@ -119,20 +122,67 @@ html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: var(--text-color);
+    color: var(--backrgound-color);
 }
 
-.container h1 {
-    font-size: 7.5rem;
-    font-weight: 400;
-    letter-spacing: -0.5rem;
-    text-align: center;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.Logo img {
+    width: auto;
+    height: 40px;
+}
+
+.Logo>.name {
+    padding: 0 0 0 0.6rem;
+}
+
+.Logo>.name>h1 {
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1;
+}
+
+.Logo>.name>.first-name {
+    font-size: 1rem;
+}
+
+.Logo>.name>.last-name {
+    font-size: 1.4rem;
+}
+
+.socials {
+    height: fit-content;
+}
+
+.socials a {
+    text-decoration: none;
+    line-height: 1;
+    padding-left: 15px;
+}
+
+.socials>.social>img {
+    width: 25px;
+    height: auto;
 }
 
 .mobile-view {
-    color: var(--text-color);
     height: 100vh;
     width: 100%;
+    background-color: var(--text-color);
+    color: var(--backrgound-color);
 }
 
 canvas {
@@ -149,27 +199,16 @@ canvas {
     max-width: 37.5em;
 }
 
-.mobile-view a {
+.mobile-view a.contact {
     color: var(--primary-color);
     text-decoration: none;
 }
 
-.mobile-view a:hover {
-    text-decoration: underline;
-}
-
-.mobile-view a:active {
-    color: #0c48db;
-}
-
-.mobile-view a:visited {
-    color: #5785f6;
-}
-
 .mobile-view h1 {
-    font: 1.4em "Ubuntu", Arial, sans-serif;
+    font-size: 1.4em;
     line-height: 1.5;
     margin-bottom: .75em;
+    font-weight: 400;
 }
 
 .mobile-view p,
@@ -181,29 +220,13 @@ ul {
     margin-left: 1.5em;
 }
 
-@media (prefers-color-scheme: dark) {
-    a {
-        color: #5785f6;
-    }
-
-    a:active {
-        color: var(--primary-color);
-    }
-
-    a:visited {
-        color: #87a9f9;
-    }
-}
-
 @media (min-width: 768px) {
     .loader {
         display: block;
     }
 
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
     }
 
     .mobile-view {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heyHardik</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/logo_white.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
@@ -24,18 +24,42 @@
     </div>
 
     <div class="container">
-        <h1>Hey there.</h1>
+
+        <nav class="navbar section-gap">
+            <div class="Logo">
+                <img src="{{ url_for('static', filename='assets/logo_black.png') }}" alt="Logo" class="logoImg">
+                <div class="name">
+                    <h1 class="first-name">hardik</h1>
+                    <h1 class="last-name">jaiswal</h1>
+                </div>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/pseudopythonic/" target="_blank" class="social">
+                    <img src="{{ url_for('static', filename='assets/socials/linkedin.png') }}" alt="linkedin">
+                </a>
+                <a href="https://github.com/pythonicforge" target="_blank" class="social">
+                    <img src="{{ url_for('static', filename='assets/socials/github.png') }}" alt="github">
+                </a>
+                <a href="https://twitter.com/hardeadik" target="_blank" class="social">
+                    <img src="{{ url_for('static', filename='assets/socials/twitter.png') }}" alt="twitter">
+                </a>
+                <a href="https://www.instagram.com/hardeadik/" target="_blank" class="social">
+                    <img src="{{ url_for('static', filename='assets/socials/instagram.png') }}" alt="instagram">
+                </a>
+            </div>
+        </nav>
     </div>
 
     <main class="mobile-view">
         <div class="wrap">
             <h1>Uh-Oh! Smaller screen detected</h1>
             <canvas width="560" height="312"></canvas>
-            <p>You’re in the middle of nowhere. This website runs on only tablets and desktops</p>
+            <p>You’re in the middle of nowhere. This website runs only on tablets and desktops</p>
             <p>What you can do:</p>
             <ul>
                 <li>Switch to a bigger screen</li>
-                <li><a href="mailto:pythonicforge@gmail.com">Contact me</a> if you believe this happened in error</li>
+                <li><a class="contact" href="pythonicforge@gmail.com">Contact me</a> if you believe this happened in error</li>
             </ul>
         </div>
     </main>
