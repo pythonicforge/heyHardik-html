@@ -24,7 +24,7 @@
     </div>
 
     <div class="container">
-        
+
         <nav class="navbar section-gap">
             <div id="error-container" class="error-popup"></div>
             <div class="Logo">
@@ -34,7 +34,6 @@
                     <h1 class="last-name">jaiswal</h1>
                 </div>
             </div>
-
             <div class="socials">
                 <a href="https://www.linkedin.com/in/pseudopythonic/" target="_blank" class="social">
                     <img src="{{ url_for('static', filename='assets/socials/linkedin.png') }}" alt="linkedin">
@@ -49,8 +48,12 @@
                     <img src="{{ url_for('static', filename='assets/socials/instagram.png') }}" alt="instagram">
                 </a>
             </div>
-
         </nav>
+
+        <div class="main-container">
+            <div id="animation-container"></div>
+            <button id="speak-button">Speak</button>
+        </div>
 
         <div class="footer">
             <p id="instructions">Toggle 'V' key to speak</p>
@@ -65,7 +68,7 @@
         </div>
     </div>
 
-    <main class="mobile-view">
+    <!-- <main class="mobile-view">
         <div class="wrap">
             <h1>Uh-Oh! Smaller screen detected</h1>
             <canvas width="560" height="312"></canvas>
@@ -77,12 +80,15 @@
                     error</li>
             </ul>
         </div>
-    </main>
+    </main> -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
     <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/game.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/microphone.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
 </body>
 
 </html>

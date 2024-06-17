@@ -134,21 +134,25 @@ html {
 
 .error-popup {
     position: absolute;
-    top: -50px; /* Start position hidden above the top */
+    top: -50px;
+    /* Start position hidden above the top */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red background */
+    background-color: rgba(255, 0, 0, 0.8);
+    /* Semi-transparent red background */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out; /* Transition for opacity and position */
+    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+    /* Transition for opacity and position */
 }
 
 .error-popup.visible {
     opacity: 1;
-    top: 20px; /* Position it just below the top edge */
+    top: 20px;
+    /* Position it just below the top edge */
 }
 
 .Logo {
@@ -197,7 +201,27 @@ html {
     height: auto;
 }
 
-.footer{
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:609px;
+}
+
+#animation-container {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer {
     position: fixed;
     height: 60px;
     left: 0;
@@ -211,7 +235,7 @@ html {
     user-select: none;
 }
 
-.footer > #instructions.hidden{
+.footer>#instructions.hidden {
     display: none;
 }
 
@@ -254,12 +278,14 @@ html {
 }
 
 @keyframes bounce {
-    0%{
+    0% {
         height: 20px;
     }
+
     50% {
         height: 10px;
     }
+
     100% {
         height: 20px;
     }
@@ -267,21 +293,25 @@ html {
 
 .subtitle {
     position: absolute;
-    bottom: 0px; /* Start position hidden below the footer */
+    bottom: 0px;
+    /* Start position hidden below the footer */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out; /* Transition for opacity and position */
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    /* Transition for opacity and position */
 }
 
 .subtitle.visible {
     opacity: 1;
-    bottom: 70px; /* Position it just above the footer */
+    bottom: 70px;
+    /* Position it just above the footer */
 }
 
 .mobile-view {
