@@ -112,7 +112,7 @@ html {
 }
 
 .section-gap {
-    margin: 2rem 1.5rem;
+    margin: 1rem 1.5rem;
 }
 
 .container {
@@ -130,6 +130,25 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.error-popup {
+    position: absolute;
+    top: -50px; /* Start position hidden above the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out; /* Transition for opacity and position */
+}
+
+.error-popup.visible {
+    opacity: 1;
+    top: 20px; /* Position it just below the top edge */
 }
 
 .Logo {
@@ -176,6 +195,93 @@ html {
 .socials>.social>img {
     width: 25px;
     height: auto;
+}
+
+.footer{
+    position: fixed;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid var(--circle-outline);
+    color: var(--circle-outline);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.footer > #instructions.hidden{
+    display: none;
+}
+
+#listening-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#listening-indicator.hidden {
+    display: none;
+}
+
+.bar {
+    width: 5px;
+    border-radius: 5px;
+    height: 20px;
+    margin: 0 3px;
+    background-color: var(--circle-outline);
+}
+
+.bar:nth-child(1) {
+    animation: bounce 0.7s 0.6s infinite;
+}
+
+.bar:nth-child(2) {
+    animation: bounce 0.7s 0.3s infinite;
+}
+
+.bar:nth-child(3) {
+    animation: bounce 0.7s infinite;
+}
+
+.bar:nth-child(4) {
+    animation: bounce 0.7s 0.3s infinite;
+}
+
+.bar:nth-child(5) {
+    animation: bounce 0.7s 0.6s infinite;
+}
+
+@keyframes bounce {
+    0%{
+        height: 20px;
+    }
+    50% {
+        height: 10px;
+    }
+    100% {
+        height: 20px;
+    }
+}
+
+.subtitle {
+    position: absolute;
+    bottom: 0px; /* Start position hidden below the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out; /* Transition for opacity and position */
+}
+
+.subtitle.visible {
+    opacity: 1;
+    bottom: 70px; /* Position it just above the footer */
 }
 
 .mobile-view {
