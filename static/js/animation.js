@@ -1,6 +1,5 @@
 let siriWave; // Declare siriWave globally
 
-// Function to initialize SiriWave with initial settings
 function initializeSiriWave() {
     const container = document.getElementById("animation-container");
     const initialWidth = window.innerWidth; // Initial width

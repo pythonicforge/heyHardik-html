@@ -24,7 +24,7 @@
     </div>
 
     <div class="container">
-
+        
         <nav class="navbar section-gap">
             <div id="error-container" class="error-popup"></div>
             <div class="Logo">
@@ -52,7 +52,6 @@
 
         <div class="main-container">
             <div id="animation-container"></div>
-            <button id="speak-button">Speak</button>
         </div>
 
         <div class="footer">
@@ -68,25 +67,9 @@
         </div>
     </div>
 
-    <!-- <main class="mobile-view">
-        <div class="wrap">
-            <h1>Uh-Oh! Smaller screen detected</h1>
-            <canvas width="560" height="312"></canvas>
-            <p>You’re in the middle of nowhere. This website runs only on tablets and desktops</p>
-            <p>What you can do:</p>
-            <ul>
-                <li>Switch to a bigger screen</li>
-                <li><a class="contact" href="pythonicforge@gmail.com">Contact me</a> if you believe this happened in
-                    error</li>
-            </ul>
-        </div>
-    </main> -->
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
     <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
-    <!-- <script src="{{ url_for('static', filename='js/game.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/microphone.js') }}"></script>
     <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
 </body>

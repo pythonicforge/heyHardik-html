@@ -135,24 +135,20 @@ html {
 .error-popup {
     position: absolute;
     top: -50px;
-    /* Start position hidden above the top */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 0, 0, 0.8);
-    /* Semi-transparent red background */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
-    /* Transition for opacity and position */
 }
 
 .error-popup.visible {
     opacity: 1;
     top: 20px;
-    /* Position it just below the top edge */
 }
 
 .Logo {
@@ -201,24 +197,10 @@ html {
     height: auto;
 }
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height:609px;
-}
-
 #animation-container {
     width: 100%;
     height: 200px;
     background-color: #fff;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .footer {
@@ -294,67 +276,22 @@ button {
 .subtitle {
     position: absolute;
     bottom: 0px;
-    /* Start position hidden below the footer */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent background */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
-    /* Transition for opacity and position */
 }
 
 .subtitle.visible {
     opacity: 1;
     bottom: 70px;
-    /* Position it just above the footer */
 }
 
-.mobile-view {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--text-color);
-    color: var(--backrgound-color);
-}
-
-canvas {
-    display: block;
-    margin: 1.5 auto 1.5em auto;
-    width: 100%;
-    height: auto;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.wrap {
-    margin: auto;
-    padding: 1.5em;
-    max-width: 37.5em;
-}
-
-.mobile-view a.contact {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.mobile-view h1 {
-    font-size: 1.4em;
-    line-height: 1.5;
-    margin-bottom: .75em;
-    font-weight: 400;
-}
-
-.mobile-view p,
-ul {
-    margin: 1.5em 0 0 0;
-}
-
-.mobile-view ul {
-    margin-left: 1.5em;
-}
 
 @media (min-width: 768px) {
     .loader {
@@ -363,10 +300,6 @@ ul {
 
     .container {
         display: block;
-    }
-
-    .mobile-view {
-        display: none;
     }
 }
 
@@ -377,12 +310,5 @@ ul {
 
     .container {
         display: none;
-    }
-
-    .mobile-view {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
 }
